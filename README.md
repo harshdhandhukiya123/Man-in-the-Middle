@@ -1,23 +1,41 @@
-# Man-in-the-Middle (MitM) Attack Simulation and Network Traffic Analysis
+# 🕵️‍♂️ Man-in-the-Middle (MitM) Attack Simulation & Network Traffic Analysis
 
-## 🛡️ Project Overview
+This project demonstrates a **Man-in-the-Middle (MitM)** attack simulation using **Bettercap** on **Kali Linux**, targeting a **Windows 10** machine in a controlled virtual environment. It focuses on analyzing intercepted network traffic and enhancing understanding of network security.
 
-This project simulates a **Man-in-the-Middle (MitM) attack** within a secure virtualized environment using **Kali Linux** and **Windows 10**. The goal is to demonstrate potential network vulnerabilities and understand how malicious actors can intercept and manipulate data over an unsecured network.
+---
 
-## ⚙️ Tools & Technologies
+## 🎯 Objective
 
-- **Operating Systems**: Kali Linux, Windows 10 (in VirtualBox/VMware)
-- **Tools Used**:
-  - [Bettercap](https://www.bettercap.org/) – for ARP spoofing and packet manipulation
-  - Wireshark – for deep packet inspection and network analysis
+To simulate a MitM attack and analyze intercepted traffic to:
 
-## 🔧 Setup Instructions
+- Understand network vulnerabilities
+- Capture unencrypted HTTP credentials
+- Improve ethical hacking and cybersecurity skills
 
-1. **Environment Setup**:
-   - Use VirtualBox or VMware to run Kali Linux and Windows 10 on the same host machine or virtual network.
-   - Ensure both VMs are on the same network (NAT/Bridge/Host-only adapter).
+---
 
-2. **Install Bettercap on Kali**:
-   ```bash
-   sudo apt update
-   sudo apt install bettercap
+## ⚙️ Environment Setup
+
+- **Host OS**: Windows 10
+- **Virtualization**: VirtualBox / VMware
+- **VMs Used**:
+  - **Attacker**: Kali Linux
+  - **Victim**: Windows 10
+- **Network Mode**: Bridged / Host-Only Adapter
+
+---
+
+## 🛠️ Tools & Technologies
+
+- [Bettercap](https://www.bettercap.org/) – ARP spoofing & HTTP proxy
+- Wireshark – Packet capture and inspection
+- Git, GitHub, Git LFS (for large file support)
+- VS Code
+
+---
+
+## 🧪 Steps to Simulate MitM Attack
+
+### 1. **Enable IP Forwarding on Kali**
+```bash
+echo 1 > /proc/sys/net/ipv4/ip_forward
